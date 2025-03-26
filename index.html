@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analog Watch with javascript</title>
+    <link rel="stylesheet" href="analog-style.css" />
+    <!-- <script src="logic_analog.js"></script> -->
+  </head>
+  <body>
+    <div id="container">
+      <div class="clocks_wraper">
+        <div id="hour"></div>
+        <div id="minute"></div>
+        <div id="second"></div>
+        <div id="numbers">
+          <div class="number num1"><span>1</span></div>
+          <div class="number num2"><span>2</span></div>
+          <div class="number num3"><span>3</span></div>
+          <div class="number num4"><span>4</span></div>
+          <div class="number num5"><span>5</span></div>
+          <div class="number num6"><span>6</span></div>
+          <div class="number num7"><span>7</span></div>
+          <div class="number num8"><span>8</span></div>
+          <div class="number num9"><span>9</span></div>
+          <div class="number num10"><span>10</span></div>
+          <div class="number num11"><span>11</span></div>
+          <div class="number num12"><span>12</span></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let hourHand = document.getElementById("hour");
+      let minuteHand = document.getElementById("minute");
+      let secondHand = document.getElementById("second");
+      console.log(secondHand);
+      setInterval(setClock, 1000);
+      function setClock() {
+        const currDate = new Date();
+        const hour = currDate.getHours();
+        const min = currDate.getMinutes();
+        const sec = currDate.getSeconds();
+
+        let hourRotation = 30 * hour + min / 2;
+        let minuteRotation = 6 * min;
+        let secondRotation = 6 * sec;
+
+        secondHand.style.transform = `rotate(${secondRotation}deg)`;
+        minuteHand.style.transform = `rotate(${minuteRotation}deg)`;
+        hourHand.style.transform = `rotate(${hourRotation}deg)`;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+#container {
+  width: 100%;
+  height: 100vh;
+  background-color: cadetblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clocks_wraper {
+  width: 70vmin;
+  height: 70vmin;
+  background-color: #001926;
+  border-radius: 50%;
+  position: relative;
+  border: 30px solid #0c2633;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 9px 7px rgba(0, 0, 0, 0.5);
+}
+#numbers {
+  height: 100%;
+  width: 100%;
+  /* border: 2px solid red; */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.number {
+  position: absolute;
+  height: 100%;
+  padding-top: 20px;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.num1 {
+  transform: rotate(30deg);
+}
+.num2 {
+  transform: rotate(60deg);
+}
+.num3 {
+  transform: rotate(90deg);
+}
+.num4 {
+  transform: rotate(120deg);
+}
+.num5 {
+  transform: rotate(150deg);
+}
+.num6 {
+  transform: rotate(180deg);
+}
+.num7 {
+  transform: rotate(210deg);
+}
+.num8 {
+  transform: rotate(240deg);
+}
+.num9 {
+  transform: rotate(270deg);
+}
+.num10 {
+  transform: rotate(300deg);
+}
+.num11 {
+  transform: rotate(330deg);
+}
+.num12 {
+  transform: rotate(360deg);
+}
+
+.num1 span {
+  position: absolute;
+  transform: rotate(-30deg);
+}
+.num2 span {
+  position: absolute;
+  transform: rotate(-60deg);
+}
+.num3 span {
+  position: absolute;
+  transform: rotate(-90deg);
+}
+
+.num4 span {
+  position: absolute;
+  transform: rotate(-120deg);
+}
+.num5 span {
+  position: absolute;
+  transform: rotate(-150deg);
+}
+.num6 span {
+  position: absolute;
+  transform: rotate(-180deg);
+}
+.num7 span {
+  position: absolute;
+  transform: rotate(-210deg);
+}
+.num8 span {
+  position: absolute;
+  transform: rotate(-230deg);
+}
+.num9 span {
+  position: absolute;
+  transform: rotate(-270deg);
+}
+.num10 span {
+  position: absolute;
+  transform: rotate(-300deg);
+}
+.num11 span {
+  position: absolute;
+  transform: rotate(-330deg);
+}
+
+/* center design */
+.clocks_wraper::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 5px solid white;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 40;
+  background-color: grey;
+}
+#hour,
+#minute,
+#second {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: bottom;
+}
+#hour {
+  width: 10px;
+  height: 27%;
+  top: 23%;
+  /* border: 2px solid red; */
+  background-color: #ff105e;
+  border-radius: 5px 5px 15px 15px;
+  /* display: none; */
+  z-index: 10;
+  transform: rotate(60deg);
+}
+#minute {
+  width: 6px;
+  height: 33%;
+  top: 17%;
+  /* border: 2px solid red; */
+  background-color: white;
+  border-radius: 100px 100px 5px 5px;
+  /* display: none; */
+  z-index: 10;
+  transform: rotate(30deg);
+}
+#second {
+  width: 3px;
+  height: 40%;
+  top: 10%;
+  /* border: 2px solid red; */
+  background-color: #236aee;
+  border-radius: 15px 15px 5px 5px;
+  z-index: 41;
+  /* display: none; */
+  transform: rotate(330deg);
+}
